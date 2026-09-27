@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccessAgent Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #ffffff;
+            padding: 15px;
+        }
+        h2 { color: #007acc; }
+        .btn {
+            background-color: #0e639c;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin: 5px 0;
+            width: 100%;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .btn:hover { background-color: #1177bb; }
+        .accessibility-box {
+            border: 1px solid #007acc;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>AccessAgent Pro</h2>
+    <p><strong>Status:</strong> Offline (Local Gemma 4 Connected)</p>
+
+    <div class="accessibility-box">
+        <h3>Accessibility Actions</h3>
+        <button class="btn" onclick="speakText()">🔊 Read Code Aloud (TTS)</button>
+        <button class="btn" onclick="explainCode()">💡 Socratic Explanation Mode</button>
+        <button class="btn" onclick="toggleContrast()">👁️ High Contrast Toggle</button>
+    </div>
+
+    <script>
+        function speakText() {
+            alert("AccessAgent TTS: Reading selected code summary...");
+        }
+        function explainCode() {
+            alert("AccessAgent Socratic Mode: Explaining logic step-by-step...");
+        }
+        function toggleContrast() {
+            document.body.style.backgroundColor = 
+                document.body.style.backgroundColor === 'black' ? '#1e1e1e' : 'black';
+        }
+    </script>
+</body>
+</html>
